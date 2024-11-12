@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3r1rZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ@KaoGN26/zrn20ImR1DfuLWn007aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Dev Burguer - A melhor hamburgueria dev!</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <i class="fas fa-hamburger logo"></i>
+            <h1 class="title">Dev Burguer</h1>
+            <span class="address">Rua Dev 10, Campo Grande - MS</span>
+            <div class="opening-hours">Seg á Dom - 18:00 às 22:00</div>
+        </div>
+    </header>
+    <!-- FIM HEADER -->
+
+    <!-- MENU -->
+    <main class="menu">
+        <h2 class="menu-title">Conheça nosso menu</h2>
+        <div class="menu-grid">
+            <!-- Produtos -->
+            <section class="menu-item">
+                <i class="fas fa-burger menu-icon"></i>
+                <div class="menu-details">
+                    <p class="menu-name">Hamburguer Smash</p>
+                    <p class="menu-description">
+                        Pão artesanal, burger 160g, queijo cheddar e molho especial.
+                    </p>
+                    <div class="menu-actions">
+                        <p class="menu-price">R$ 30,90</p>
+                        <button class="add-to-cart-btn" data-name="Hamburguer Smash" data-price="30.90">
+                            <i class="fa fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <!-- Outros produtos -->
+            <section class="menu-item">
+                <i class="fas fa-pizza-slice menu-icon"></i>
+                <div class="menu-details">
+                    <p class="menu-name">Pizza Dev</p>
+                    <p class="menu-description">Deliciosa pizza artesanal com ingredientes frescos.</p>
+                    <div class="menu-actions">
+                        <p class="menu-price">R$ 45,00</p>
+                        <button class="add-to-cart-btn" data-name="Pizza Dev" data-price="45.00">
+                            <i class="fa fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="menu-item">
+                <i class="fas fa-coffee menu-icon"></i>
+                <div class="menu-details">
+                    <p class="menu-name">Café Premium</p>
+                    <p class="menu-description">Um café especial para os devs.</p>
+                    <div class="menu-actions">
+                        <p class="menu-price">R$ 8,50</p>
+                        <button class="add-to-cart-btn" data-name="Café Premium" data-price="8.50">
+                            <i class="fa fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="menu-item">
+                <i class="fas fa-ice-cream menu-icon"></i>
+                <div class="menu-details">
+                    <p class="menu-name">Sorvete Code</p>
+                    <p class="menu-description">Sorvete com sabor de criatividade.</p>
+                    <div class="menu-actions">
+                        <p class="menu-price">R$ 15,00</p>
+                        <button class="add-to-cart-btn" data-name="Sorvete Code" data-price="15.00">
+                            <i class="fa fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="menu-item">
+                <i class="fas fa-beer menu-icon"></i>
+                <div class="menu-details">
+                    <p class="menu-name">Cerveja Dev</p>
+                    <p class="menu-description">Refrescante cerveja artesanal.</p>
+                    <div class="menu-actions">
+                        <p class="menu-price">R$ 12,00</p>
+                        <button class="add-to-cart-btn" data-name="Cerveja Dev" data-price="12.00">
+                            <i class="fa fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- FIM MENU -->
+
+    <!-- MODAL CART -->
+    <div id="cart-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Meu carrinho</h2>
+            <div id="cart-items"></div>
+            <p>Total: <span id="cart-total">R$ 0,00</span></p>
+            <input type="text" id="address" placeholder="Digite seu endereço completo..." />
+            <div class="modal-actions">
+                <button id="close-modal-btn">Fechar</button>
+                <button id="checkout-btn">Finalizar pedido</button>
+            </div>
+        </div>
+    </div>
+    <!-- FIM MODAL CART -->
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="address-container">
+            <label for="address" class="address-label">Digite seu endereço completo:</label>
+            <input type="text" id="address" class="address-input" placeholder="Rua, número, bairro, cidade...">
+        </div>
+        <button id="cart-btn">
+            (<span id="cart-count">2</span>) Veja meu carrinho
+            <i class="fa fa-cart-plus"></i>
+        </button>
+    </footer>
+    
+    <!-- FIM FOOTER -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>
